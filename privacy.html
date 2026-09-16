@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Shuo's Social Science Toolkit</title>
+  <style>
+    body { max-width: 640px; margin: 60px auto; padding: 0 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 15px; line-height: 1.7; color: #222; background: #fff; }
+    h1 { font-size: 22px; margin-bottom: 24px; }
+    h2 { font-size: 16px; margin-top: 28px; }
+    a { color: #1a73e8; }
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy — Shuo's Social Science Toolkit</h1>
+  <p><strong>Effective Date:</strong> August 16, 2026</p>
+
+  <h2>Data Collection</h2>
+  <p>This extension does not collect or store personal data on external servers. Journal matching normally uses databases bundled with the extension.</p>
+
+  <h2>What the Extension Does</h2>
+  <p>The extension reads publication metadata on supported Google Scholar, PubMed, Web of Science, Scopus, ResearchGate, and ORCID pages you visit. It displays journal quartile (JCR/SJR), index information (SCIE, SSCI, AHCI, ESCI, EI, Scopus), Impact Factor, H-index, and a fully open-access APC price tier next to journal names. Matching is performed locally after the source metadata has been resolved.</p>
+  <p>When the extension cannot determine a journal identity from its local data, it may send the <strong>visible paper title or DOI only</strong> to Crossref to obtain the journal name and ISSNs. It does not send authors, abstracts, profile identifiers, or the page's search query to Crossref.</p>
+  <p>On PubMed pages, the extension may send the <strong>visible PubMed IDs (PMIDs) only</strong> in one batch to NCBI ESummary to obtain full journal names and ISSNs. It does not send search terms, abstracts, or page content to NCBI.</p>
+  <p>The optional Citation Checker reads a Word <code>.docx</code> file that you explicitly choose. The document is decompressed and checked in the extension page on your device. The file and report are not uploaded or sent to Crossref.</p>
+
+  <h2>Data Storage</h2>
+  <p>The extension stores only its enabled/disabled setting and current version in Chrome's local extension storage. Crossref lookup keys and responses may be cached temporarily in service-worker memory to avoid duplicate requests; they are not written to local storage and are cleared when that worker restarts. Selected DOCX files and citation reports are kept in memory only, unless you choose to export a text report.</p>
+
+  <h2>Permissions</h2>
+  <p>The extension requests access to <code>scholar.google.*</code>, <code>pubmed.ncbi.nlm.nih.gov</code>, <code>webofscience.com</code>, <code>scopus.com</code>, <code>researchgate.net</code>, and <code>orcid.org</code> to read publication metadata; to <code>api.crossref.org</code> for journal-identity recovery; and to <code>eutils.ncbi.nlm.nih.gov</code> for PubMed journal metadata. It does not access other websites.</p>
+
+  <h2>Third-Party Services</h2>
+  <p>The extension uses the following public academic APIs:</p>
+  <ul>
+    <li><strong>Crossref</strong> (<code>api.crossref.org</code>) — the official DOI registration agency. No API key or authentication required.</li>
+    <li><strong>NCBI E-utilities</strong> (<code>eutils.ncbi.nlm.nih.gov</code>) — retrieves PubMed journal names and ISSNs from visible PMIDs. No API key or authentication required for this low-volume batched use.</li>
+  </ul>
+  <p>Only a visible publication title or DOI is transmitted to Crossref when local journal matching fails, and only visible PMIDs are transmitted to NCBI on PubMed pages. No Scholar profile identifier, author list, abstract, manuscript, browsing history, page search query, or extension-generated user identifier is sent. Like any web request, the third-party service receives ordinary network information such as the requesting IP address. No analytics, tracking, or advertising services are used.</p>
+
+  <h2>Citation Checker Limits</h2>
+  <p>The checker is an offline heuristic assistant, not a guarantee of correctness. It works best with English APA 7 author-year citations and square-bracket numeric citations. It does not fully inspect footnotes, endnotes, images, equations, PDFs, source authenticity, semantic accuracy, or every journal-specific rule.</p>
+
+  <h2>Contact</h2>
+  <p>If you have questions, contact: Shuo</p>
+
+  <p style="margin-top: 40px; color: #888; font-size: 13px;">This policy may be updated. Changes will be reflected on this page.</p>
+</body>
+</html>
